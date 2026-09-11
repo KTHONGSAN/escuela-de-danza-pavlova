@@ -5,58 +5,1025 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Escuela de Danza Pavlova — formación artística para todas las edades.">
   <title>Escuela de Danza Pavlova</title>
-  <style>
-    .art::before,
-.art::after {
-  display: none;
-}
 
-.art img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
-    :root{--ink:#241b22;--wine:#713647;--rose:#d9a7aa;--cream:#f7f0e8;--paper:#fffaf5;--gold:#b58a56;--muted:#735f67}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:Montserrat,Arial,sans-serif;line-height:1.6}
-    h1,h2,h3,.brand{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.05}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}
-    header{position:fixed;z-index:20;top:0;width:100%;background:rgba(255,250,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(113,54,71,.1)}
-    nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:1.4rem;font-weight:600;letter-spacing:.04em;display:flex;align-items:center;gap:11px}.brand img{width:54px;height:54px;border-radius:50%;object-fit:cover}.brand-text small{display:block;font:500 .57rem Montserrat;letter-spacing:.25em;color:var(--wine)}
-    .links{display:flex;align-items:center;gap:24px;font-size:.78rem;text-transform:uppercase;letter-spacing:.09em}.links a:hover{color:var(--wine)}
-    .lang{border:1px solid var(--wine);background:transparent;color:var(--wine);padding:7px 10px;cursor:pointer}
-    .hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(36,27,34,.88),rgba(113,54,71,.62)),radial-gradient(circle at 70% 30%,#d9a7aa,#713647 45%,#241b22);color:white}
-    .hero:after{content:"";position:absolute;width:54vw;height:54vw;right:-12vw;bottom:-28vw;border:1px solid rgba(255,255,255,.22);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.04),0 0 0 140px rgba(255,255,255,.03)}
-    .hero-content{position:relative;z-index:2;text-align:center;width:min(850px,90%);padding-top:70px}.hero-logo{width:116px;height:116px;object-fit:cover;border-radius:50%;box-shadow:0 14px 45px rgba(0,0,0,.28);margin-bottom:18px}.eyebrow{text-transform:uppercase;letter-spacing:.35em;font-size:.72rem;color:#f0d9d5}.hero h1{font-size:clamp(4rem,10vw,8.5rem);font-weight:400;margin:12px 0}.hero p{font-family:"Cormorant Garamond";font-size:clamp(1.3rem,2.5vw,2rem);margin:0 0 34px;color:#fff5ee}.heritage{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 30px}.heritage span{border:1px solid rgba(255,255,255,.35);padding:7px 11px;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
-    .btn{display:inline-block;padding:14px 25px;background:var(--wine);color:white;border:1px solid var(--wine);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;cursor:pointer}.btn.light{background:transparent;border-color:white;margin-left:10px}.btn:hover{filter:brightness(1.12)}
-    section{padding:105px 0}.section-head{text-align:center;margin-bottom:52px}.section-head span{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--wine)}.section-head h2{font-size:clamp(2.8rem,6vw,4.5rem);font-weight:500;margin:10px}.section-head p{max-width:610px;margin:auto;color:var(--muted)}
-    .intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.art{min-height:520px;position:relative;background:linear-gradient(145deg,#d7b0ac,#7b4856);overflow:hidden}.art:before{content:"P";position:absolute;inset:0;display:grid;place-items:center;font:400 26rem "Cormorant Garamond";color:rgba(255,255,255,.17)}.art:after{content:"Tu fotografía aquí";position:absolute;bottom:25px;left:30px;color:white;letter-spacing:.15em;text-transform:uppercase;font-size:.68rem}.intro h2{font-size:4rem;font-weight:500;margin:0 0 20px}.intro p{color:var(--muted)}
-    .programs{background:var(--cream)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:var(--paper);padding:42px 30px;border-top:3px solid var(--rose);transition:.25s}.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(50,30,37,.08)}.card .num{color:var(--gold);font-family:"Cormorant Garamond";font-size:1.5rem}.card h3{font-size:2rem;margin:20px 0 10px}.card p{color:var(--muted);font-size:.9rem}.card a{color:var(--wine);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em}
-    .schedule{overflow-x:auto}table{width:100%;border-collapse:collapse;background:white}th,td{padding:18px 20px;text-align:left;border-bottom:1px solid #eaded7}th{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wine)}td strong{font-family:"Cormorant Garamond";font-size:1.3rem}.note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:18px}
-    .trial{background:var(--ink);color:white}.trial-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}.trial h2{font-size:4rem;font-weight:400;margin:0 0 20px}.trial p{color:#d9cdd0}.form{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form input,.form select,.form textarea{width:100%;padding:15px;border:1px solid #684f58;background:#30262d;color:white;font:inherit}.form input::placeholder,.form textarea::placeholder{color:#b8a9ae}.full{grid-column:1/-1}.form .btn{width:100%}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h3{font-size:2rem;margin-top:0}.details{display:grid;gap:22px}.detail span{display:block;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--wine)}.placeholder{color:var(--muted);font-style:italic}.payment{padding:28px;border:1px solid #dfcdc4;background:var(--cream)}
-    footer{background:#181216;color:#cdbfc3;padding:45px 0}.foot{display:flex;align-items:center;justify-content:space-between}.socials{display:flex;gap:18px;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}
-    @media(max-width:820px){.links a:not(.nav-cta){display:none}.intro,.trial-grid,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.art{min-height:380px}.form{grid-template-columns:1fr}.full{grid-column:auto}.hero h1{font-size:4.3rem}.foot{align-items:flex-start;flex-direction:column;gap:24px}section{padding:80px 0}}
+
+    :root {
+      --ink: #241b22;
+      --wine: #713647;
+      --rose: #d9a7aa;
+      --cream: #f7f0e8;
+      --paper: #fffaf5;
+      --gold: #b58a56;
+      --muted: #735f67;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Montserrat, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      line-height: 1.05;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 250, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(113, 54, 71, 0.1);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-text small {
+      display: block;
+      font: 500 0.57rem Montserrat;
+      letter-spacing: 0.25em;
+      color: var(--wine);
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .links a:hover {
+      color: var(--wine);
+    }
+
+    .lang {
+      border: 1px solid var(--wine);
+      background: transparent;
+      color: var(--wine);
+      padding: 7px 10px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(120deg, rgba(36, 27, 34, 0.88), rgba(113, 54, 71, 0.62)),
+        radial-gradient(circle at 70% 30%, #d9a7aa, #713647 45%, #241b22);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 54vw;
+      height: 54vw;
+      right: -12vw;
+      bottom: -28vw;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 70px rgba(255, 255, 255, 0.04),
+        0 0 0 140px rgba(255, 255, 255, 0.03);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(850px, 90%);
+      padding: 110px 0 60px;
+      text-align: center;
+    }
+
+    .hero-logo {
+      width: 116px;
+      height: 116px;
+      margin-bottom: 18px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 14px 45px rgba(0, 0, 0, 0.28);
+    }
+
+    .eyebrow {
+      color: #f0d9d5;
+      font-size: 0.72rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 12px 0;
+      font-size: clamp(4rem, 10vw, 8.5rem);
+      font-weight: 400;
+    }
+
+    .hero p {
+      margin: 0 0 24px;
+      color: #fff5ee;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+    }
+
+    .heritage {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .heritage span {
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid var(--wine);
+      background: var(--wine);
+      color: white;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .btn.light {
+      margin-left: 10px;
+      border-color: white;
+      background: transparent;
+    }
+
+    .btn:hover {
+      filter: brightness(1.12);
+    }
+
+    section {
+      padding: 105px 0;
+    }
+
+    .section-head {
+      margin-bottom: 52px;
+      text-align: center;
+    }
+
+    .section-head span {
+      color: var(--wine);
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      margin: 10px;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 500;
+    }
+
+    .section-head p {
+      max-width: 610px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .art {
+      position: relative;
+      min-height: 0;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .art::before,
+    .art::after {
+      display: none;
+    }
+
+    .art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .intro h2 {
+      margin: 0 0 20px;
+      font-size: 4rem;
+      font-weight: 500;
+    }
+
+    .intro p {
+      color: var(--muted);
+    }
+
+    .programs {
+      background: var(--cream);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 42px 30px;
+      border-top: 3px solid var(--rose);
+      background: var(--paper);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(50, 30, 37, 0.08);
+    }
+
+    .card .num {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.5rem;
+    }
+
+    .card h3 {
+      margin: 20px 0 10px;
+      font-size: 2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .card a {
+      color: var(--wine);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .schedule {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th,
+    td {
+      padding: 18px 20px;
+      border-bottom: 1px solid #eaded7;
+      text-align: left;
+    }
+
+    th {
+      color: var(--wine);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    td strong {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.3rem;
+    }
+
+    .note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .trial {
+      background: var(--ink);
+      color: white;
+    }
+
+    .trial-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .trial h2 {
+      margin: 0 0 20px;
+      font-size: 4rem;
+      font-weight: 400;
+    }
+
+    .trial p {
+      color: #d9cdd0;
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #684f58;
+      background: #30262d;
+      color: white;
+      font: inherit;
+    }
+
+    .form input::placeholder,
+    .form textarea::placeholder {
+      color: #b8a9ae;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .form .btn {
+      width: 100%;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact h3 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .details {
+      display: grid;
+      gap: 22px;
+    }
+
+    .detail span {
+      display: block;
+      color: var(--wine);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .placeholder {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .payment {
+      padding: 28px;
+      border: 1px solid #dfcdc4;
+      background: var(--cream);
+    }
+
+    footer {
+      padding: 45px 0;
+      background: #181216;
+      color: #cdbfc3;
+    }
+
+    .foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .socials {
+      display: flex;
+      gap: 18px;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 820px) {
+      .links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .intro,
+      .trial-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .art {
+        min-height: 0;
+      }
+
+      .form {
+        grid-template-columns: 1fr;
+      }
+
+      .full {
+        grid-column: auto;
+      }
+
+      .hero h1 {
+        font-size: 4.3rem;
+      }
+
+      .foot {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .brand img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .brand {
+        font-size: 1.1rem;
+      }
+
+      .brand-text small {
+        font-size: 0.48rem;
+      }
+
+      .links {
+        gap: 10px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero-content {
+        padding-top: 120px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .btn.light {
+        margin-left: 0;
+      }
+
+      .intro h2,
+      .trial h2 {
+        font-size: 3rem;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header><nav class="wrap"><a class="brand" href="#inicio"><img src="assets/logo-pavlova.png" alt="Logo de Escuela de Danza Pavlova"><span class="brand-text">PAVLOVA<small>ESCUELA DE DANZA</small></span></a><div class="links"><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a><a href="#clases" data-es="Clases" data-en="Classes">Clases</a><a href="#horarios" data-es="Horarios" data-en="Schedule">Horarios</a><a class="nav-cta" href="#prueba" data-es="Clase de prueba" data-en="Free trial">Clase de prueba</a><button class="lang" id="lang">EN</button></div></nav></header>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#inicio">
+        <img src="assets/logo-pavlova.png" alt="Logo de Escuela de Danza Pavlova">
+
+        <span class="brand-text">
+          PAVLOVA
+          <small>ESCUELA DE DANZA</small>
+        </span>
+      </a>
+
+      <div class="links">
+        <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
+        <a href="#clases" data-es="Clases" data-en="Classes">Clases</a>
+        <a href="#horarios" data-es="Horarios" data-en="Schedule">Horarios</a>
+        <a class="nav-cta" href="#prueba" data-es="Clase de prueba" data-en="Free trial">
+          Clase de prueba
+        </a>
+        <button class="lang" id="lang" type="button">EN</button>
+      </div>
+    </nav>
+  </header>
+
   <main>
-    <section class="hero" id="inicio"><div class="hero-content"><img class="hero-logo" src="assets/logo-pavlova.png" alt="Logo de Escuela de Danza Pavlova"><div class="eyebrow" data-es="Arte · Disciplina · Expresión" data-en="Art · Discipline · Expression">Arte · Disciplina · Expresión</div><h1>Pavlova</h1><p data-es="40 años formando bailarines de excelencia" data-en="40 years shaping dancers of excellence">40 años formando bailarines de excelencia</p><div class="heritage"><span data-es="Fundada en 1984" data-en="Founded in 1984">Fundada en 1984</span><span>Playas de Tijuana</span><span>CID · UNESCO</span></div><a class="btn" href="#prueba" data-es="Solicitar clase gratis" data-en="Request a free class">Solicitar clase gratis</a><a class="btn light" href="#clases" data-es="Explorar clases" data-en="Explore classes">Explorar clases</a></div></section>
-    <section id="nosotros"><div class="wrap intro"><div class="art">
-  <img src="assets/pavlova-students.jpg"
-       alt="Estudiantes de Escuela de Danza Pavlova">
-</div><div><span class="eyebrow" style="color:var(--wine)" data-es="Nuestra escuela" data-en="Our academy">Nuestra escuela</span><h2 data-es="Bailar es descubrir quién eres." data-en="Dance is discovering who you are.">Bailar es descubrir quién eres.</h2><p data-es="Fundada en 1984, Escuela de Danza Pavlova lleva 40 años formando bailarines de excelencia en Playas de Tijuana. Cultivamos técnica, confianza y creatividad en un ambiente cálido para estudiantes de todas las edades." data-en="Founded in 1984, Escuela de Danza Pavlova has spent 40 years shaping dancers of excellence in Playas de Tijuana. We nurture technique, confidence, and creativity in a welcoming environment for students of all ages.">Fundada en 1984, Escuela de Danza Pavlova lleva 40 años formando bailarines de excelencia en Playas de Tijuana. Cultivamos técnica, confianza y creatividad en un ambiente cálido para estudiantes de todas las edades.</p><p data-es="Miembro del Consejo Internacional de la Danza (CID) de la UNESCO." data-en="Member of the International Dance Council (CID) at UNESCO.">Miembro del Consejo Internacional de la Danza (CID) de la UNESCO.</p></div></div></section>
-    <section class="programs" id="clases"><div class="wrap"><div class="section-head"><span data-es="Programas" data-en="Programs">Programas</span><h2 data-es="Una clase para cada etapa" data-en="A class for every stage">Una clase para cada etapa</h2><p data-es="Programas de muestra. Los reemplazaremos con las clases, edades y niveles reales de Pavlova." data-en="Sample programs. We’ll replace them with Pavlova's actual classes, ages, and levels.">Programas de muestra. Los reemplazaremos con las clases, edades y niveles reales de Pavlova.</p></div><div class="cards"><article class="card"><div class="num">01</div><h3 data-es="Primeros Pasos" data-en="First Steps">Primeros Pasos</h3><p data-es="Movimiento creativo, musicalidad y coordinación para los bailarines más pequeños." data-en="Creative movement, musicality, and coordination for our youngest dancers.">Movimiento creativo, musicalidad y coordinación para los bailarines más pequeños.</p><a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">Probar una clase →</a></article><article class="card"><div class="num">02</div><h3 data-es="Ballet Juvenil" data-en="Youth Ballet">Ballet Juvenil</h3><p data-es="Fundamentos clásicos, postura, técnica y expresión para niños y adolescentes." data-en="Classical foundations, posture, technique, and expression for children and teens.">Fundamentos clásicos, postura, técnica y expresión para niños y adolescentes.</p><a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">Probar una clase →</a></article><article class="card"><div class="num">03</div><h3 data-es="Danza para Adultos" data-en="Dance for Adults">Danza para Adultos</h3><p data-es="Clases acogedoras para comenzar, regresar a la danza o seguir perfeccionándose." data-en="Welcoming classes to begin, return to dance, or continue improving.">Clases acogedoras para comenzar, regresar a la danza o seguir perfeccionándose.</p><a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">Probar una clase →</a></article></div></div></section>
-    <section id="horarios"><div class="wrap"><div class="section-head"><span data-es="Horarios" data-en="Schedule">Horarios</span><h2 data-es="Encuentra tu momento" data-en="Find your time">Encuentra tu momento</h2></div><div class="schedule"><table><thead><tr><th data-es="Clase" data-en="Class">Clase</th><th data-es="Edad" data-en="Age">Edad</th><th data-es="Día" data-en="Day">Día</th><th data-es="Hora" data-en="Time">Hora</th><th data-es="Nivel" data-en="Level">Nivel</th></tr></thead><tbody><tr><td><strong>Primeros Pasos</strong></td><td>4–6</td><td data-es="Lunes" data-en="Monday">Lunes</td><td>4:00 PM</td><td data-es="Inicial" data-en="Beginner">Inicial</td></tr><tr><td><strong>Ballet Juvenil</strong></td><td>7–12</td><td data-es="Miércoles" data-en="Wednesday">Miércoles</td><td>5:00 PM</td><td data-es="Inicial" data-en="Beginner">Inicial</td></tr><tr><td><strong>Ballet Juvenil</strong></td><td>13–17</td><td data-es="Jueves" data-en="Thursday">Jueves</td><td>6:00 PM</td><td data-es="Intermedio" data-en="Intermediate">Intermedio</td></tr><tr><td><strong data-es="Danza para Adultos" data-en="Dance for Adults">Danza para Adultos</strong></td><td>18+</td><td data-es="Sábado" data-en="Saturday">Sábado</td><td>10:00 AM</td><td data-es="Todos" data-en="All levels">Todos</td></tr></tbody></table></div><p class="note" data-es="Horario de demostración — pendiente de confirmar." data-en="Demonstration schedule — pending confirmation.">Horario de demostración — pendiente de confirmar.</p></div></section>
-    <section class="trial" id="prueba"><div class="wrap trial-grid"><div><span class="eyebrow" data-es="Tu primera clase" data-en="Your first class">Tu primera clase</span><h2 data-es="Ven a bailar con nosotros." data-en="Come dance with us.">Ven a bailar con nosotros.</h2><p data-es="Completa el formulario y nos comunicaremos contigo para encontrar la mejor clase." data-en="Complete the form and we'll contact you to find the best class.">Completa el formulario y nos comunicaremos contigo para encontrar la mejor clase.</p></div><form class="form" id="trialForm"><input required data-ph-es="Nombre del estudiante" data-ph-en="Student name" placeholder="Nombre del estudiante"><input required type="email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico"><input data-ph-es="Edad" data-ph-en="Age" placeholder="Edad"><select><option data-es="Clase de interés" data-en="Class of interest">Clase de interés</option><option>Primeros Pasos</option><option>Ballet Juvenil</option><option data-es="Danza para Adultos" data-en="Dance for Adults">Danza para Adultos</option></select><textarea class="full" rows="4" data-ph-es="Cuéntanos sobre tu experiencia o tus preguntas" data-ph-en="Tell us about your experience or questions" placeholder="Cuéntanos sobre tu experiencia o tus preguntas"></textarea><button class="btn full" type="submit" data-es="Enviar solicitud" data-en="Send request">Enviar solicitud</button></form></div></section>
-    <section class="contact" id="contacto"><div class="wrap contact-grid"><div><h3 data-es="Visítanos" data-en="Visit us">Visítanos</h3><div class="details"><div class="detail"><span data-es="Ubicación" data-en="Location">Ubicación</span><div>Playas de Tijuana, Baja California</div></div><div class="detail"><span data-es="Teléfono" data-en="Phone">Teléfono</span><div><a href="tel:+526646301291">664 630 1291</a></div></div><div class="detail"><span>Email</span><div class="placeholder">Agregar correo electrónico</div></div><div class="detail"><span>Instagram</span><div><a href="https://www.instagram.com/escueladedanzapavlova_/" target="_blank" rel="noopener">@escueladedanzapavlova_</a></div></div></div></div><div class="payment"><h3 data-es="Inscripción y pagos" data-en="Registration and payments">Inscripción y pagos</h3><p data-es="Cuando el sistema esté listo, este botón llevará a las familias al formulario de inscripción y al pago seguro." data-en="Once the system is ready, this button will take families to registration and secure payment.">Cuando el sistema esté listo, este botón llevará a las familias al formulario de inscripción y al pago seguro.</p><a class="btn" href="#prueba" data-es="Comenzar inscripción" data-en="Start registration">Comenzar inscripción</a></div></div></section>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <img
+          class="hero-logo"
+          src="assets/logo-pavlova.png"
+          alt="Logo de Escuela de Danza Pavlova"
+        >
+
+        <div
+          class="eyebrow"
+          data-es="Arte · Disciplina · Expresión"
+          data-en="Art · Discipline · Expression"
+        >
+          Arte · Disciplina · Expresión
+        </div>
+
+        <h1>Pavlova</h1>
+
+        <p
+          data-es="40 años formando bailarines de excelencia"
+          data-en="40 years shaping dancers of excellence"
+        >
+          40 años formando bailarines de excelencia
+        </p>
+
+        <div class="heritage">
+          <span data-es="Fundada en 1984" data-en="Founded in 1984">
+            Fundada en 1984
+          </span>
+          <span>Playas de Tijuana</span>
+          <span>CID · UNESCO</span>
+        </div>
+
+        <a
+          class="btn"
+          href="#prueba"
+          data-es="Solicitar clase gratis"
+          data-en="Request a free class"
+        >
+          Solicitar clase gratis
+        </a>
+
+        <a
+          class="btn light"
+          href="#clases"
+          data-es="Explorar clases"
+          data-en="Explore classes"
+        >
+          Explorar clases
+        </a>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="wrap intro">
+        <div class="art">
+          <img
+            src="assets/pavlova-students.jpg"
+            alt="Estudiantes de Escuela de Danza Pavlova"
+          >
+        </div>
+
+        <div>
+          <span
+            class="eyebrow"
+            style="color: var(--wine)"
+            data-es="Nuestra escuela"
+            data-en="Our academy"
+          >
+            Nuestra escuela
+          </span>
+
+          <h2
+            data-es="Bailar es descubrir quién eres."
+            data-en="Dance is discovering who you are."
+          >
+            Bailar es descubrir quién eres.
+          </h2>
+
+          <p
+            data-es="Fundada en 1984, Escuela de Danza Pavlova lleva 40 años formando bailarines de excelencia en Playas de Tijuana. Cultivamos técnica, confianza y creatividad en un ambiente cálido para estudiantes de todas las edades."
+            data-en="Founded in 1984, Escuela de Danza Pavlova has spent 40 years shaping dancers of excellence in Playas de Tijuana. We nurture technique, confidence, and creativity in a welcoming environment for students of all ages."
+          >
+            Fundada en 1984, Escuela de Danza Pavlova lleva 40 años formando
+            bailarines de excelencia en Playas de Tijuana. Cultivamos técnica,
+            confianza y creatividad en un ambiente cálido para estudiantes de
+            todas las edades.
+          </p>
+
+          <p
+            data-es="Miembro del Consejo Internacional de la Danza (CID) de la UNESCO."
+            data-en="Member of the International Dance Council (CID) at UNESCO."
+          >
+            Miembro del Consejo Internacional de la Danza (CID) de la UNESCO.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="clases">
+      <div class="wrap">
+        <div class="section-head">
+          <span data-es="Programas" data-en="Programs">Programas</span>
+
+          <h2
+            data-es="Una clase para cada etapa"
+            data-en="A class for every stage"
+          >
+            Una clase para cada etapa
+          </h2>
+
+          <p
+            data-es="Programas de muestra. Los reemplazaremos con las clases, edades y niveles reales de Pavlova."
+            data-en="Sample programs. We’ll replace them with Pavlova's actual classes, ages, and levels."
+          >
+            Programas de muestra. Los reemplazaremos con las clases, edades y
+            niveles reales de Pavlova.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="num">01</div>
+            <h3 data-es="Primeros Pasos" data-en="First Steps">Primeros Pasos</h3>
+            <p
+              data-es="Movimiento creativo, musicalidad y coordinación para los bailarines más pequeños."
+              data-en="Creative movement, musicality, and coordination for our youngest dancers."
+            >
+              Movimiento creativo, musicalidad y coordinación para los
+              bailarines más pequeños.
+            </p>
+            <a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">
+              Probar una clase →
+            </a>
+          </article>
+
+          <article class="card">
+            <div class="num">02</div>
+            <h3 data-es="Ballet Juvenil" data-en="Youth Ballet">Ballet Juvenil</h3>
+            <p
+              data-es="Fundamentos clásicos, postura, técnica y expresión para niños y adolescentes."
+              data-en="Classical foundations, posture, technique, and expression for children and teens."
+            >
+              Fundamentos clásicos, postura, técnica y expresión para niños y
+              adolescentes.
+            </p>
+            <a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">
+              Probar una clase →
+            </a>
+          </article>
+
+          <article class="card">
+            <div class="num">03</div>
+            <h3 data-es="Danza para Adultos" data-en="Dance for Adults">
+              Danza para Adultos
+            </h3>
+            <p
+              data-es="Clases acogedoras para comenzar, regresar a la danza o seguir perfeccionándose."
+              data-en="Welcoming classes to begin, return to dance, or continue improving."
+            >
+              Clases acogedoras para comenzar, regresar a la danza o seguir
+              perfeccionándose.
+            </p>
+            <a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">
+              Probar una clase →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="horarios">
+      <div class="wrap">
+        <div class="section-head">
+          <span data-es="Horarios" data-en="Schedule">Horarios</span>
+          <h2 data-es="Encuentra tu momento" data-en="Find your time">
+            Encuentra tu momento
+          </h2>
+        </div>
+
+        <div class="schedule">
+          <table>
+            <thead>
+              <tr>
+                <th data-es="Clase" data-en="Class">Clase</th>
+                <th data-es="Edad" data-en="Age">Edad</th>
+                <th data-es="Día" data-en="Day">Día</th>
+                <th data-es="Hora" data-en="Time">Hora</th>
+                <th data-es="Nivel" data-en="Level">Nivel</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>Primeros Pasos</strong></td>
+                <td>4–6</td>
+                <td data-es="Lunes" data-en="Monday">Lunes</td>
+                <td>4:00 PM</td>
+                <td data-es="Inicial" data-en="Beginner">Inicial</td>
+              </tr>
+
+              <tr>
+                <td><strong>Ballet Juvenil</strong></td>
+                <td>7–12</td>
+                <td data-es="Miércoles" data-en="Wednesday">Miércoles</td>
+                <td>5:00 PM</td>
+                <td data-es="Inicial" data-en="Beginner">Inicial</td>
+              </tr>
+
+              <tr>
+                <td><strong>Ballet Juvenil</strong></td>
+                <td>13–17</td>
+                <td data-es="Jueves" data-en="Thursday">Jueves</td>
+                <td>6:00 PM</td>
+                <td data-es="Intermedio" data-en="Intermediate">Intermedio</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <strong data-es="Danza para Adultos" data-en="Dance for Adults">
+                    Danza para Adultos
+                  </strong>
+                </td>
+                <td>18+</td>
+                <td data-es="Sábado" data-en="Saturday">Sábado</td>
+                <td>10:00 AM</td>
+                <td data-es="Todos" data-en="All levels">Todos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p
+          class="note"
+          data-es="Horario de demostración — pendiente de confirmar."
+          data-en="Demonstration schedule — pending confirmation."
+        >
+          Horario de demostración — pendiente de confirmar.
+        </p>
+      </div>
+    </section>
+
+    <section class="trial" id="prueba">
+      <div class="wrap trial-grid">
+        <div>
+          <span class="eyebrow" data-es="Tu primera clase" data-en="Your first class">
+            Tu primera clase
+          </span>
+
+          <h2
+            data-es="Ven a bailar con nosotros."
+            data-en="Come dance with us."
+          >
+            Ven a bailar con nosotros.
+          </h2>
+
+          <p
+            data-es="Completa el formulario y nos comunicaremos contigo para encontrar la mejor clase."
+            data-en="Complete the form and we'll contact you to find the best class."
+          >
+            Completa el formulario y nos comunicaremos contigo para encontrar
+            la mejor clase.
+          </p>
+        </div>
+
+        <form class="form" id="trialForm">
+          <input
+            required
+            data-ph-es="Nombre del estudiante"
+            data-ph-en="Student name"
+            placeholder="Nombre del estudiante"
+          >
+
+          <input
+            required
+            type="email"
+            data-ph-es="Correo electrónico"
+            data-ph-en="Email address"
+            placeholder="Correo electrónico"
+          >
+
+          <input
+            data-ph-es="Edad"
+            data-ph-en="Age"
+            placeholder="Edad"
+          >
+
+          <select>
+            <option data-es="Clase de interés" data-en="Class of interest">
+              Clase de interés
+            </option>
+            <option>Primeros Pasos</option>
+            <option>Ballet Juvenil</option>
+            <option data-es="Danza para Adultos" data-en="Dance for Adults">
+              Danza para Adultos
+            </option>
+          </select>
+
+          <textarea
+            class="full"
+            rows="4"
+            data-ph-es="Cuéntanos sobre tu experiencia o tus preguntas"
+            data-ph-en="Tell us about your experience or questions"
+            placeholder="Cuéntanos sobre tu experiencia o tus preguntas"
+          ></textarea>
+
+          <button
+            class="btn full"
+            type="submit"
+            data-es="Enviar solicitud"
+            data-en="Send request"
+          >
+            Enviar solicitud
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="wrap contact-grid">
+        <div>
+          <h3 data-es="Visítanos" data-en="Visit us">Visítanos</h3>
+
+          <div class="details">
+            <div class="detail">
+              <span data-es="Ubicación" data-en="Location">Ubicación</span>
+              <div>Playas de Tijuana, Baja California</div>
+            </div>
+
+            <div class="detail">
+              <span data-es="Teléfono" data-en="Phone">Teléfono</span>
+              <div>
+                <a href="tel:+526646301291">664 630 1291</a>
+              </div>
+            </div>
+
+            <div class="detail">
+              <span>Email</span>
+              <div class="placeholder">Agregar correo electrónico</div>
+            </div>
+
+            <div class="detail">
+              <span>Instagram</span>
+              <div>
+                <a
+                  href="https://www.instagram.com/escueladedanzapavlova_/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  @escueladedanzapavlova_
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment">
+          <h3
+            data-es="Inscripción y pagos"
+            data-en="Registration and payments"
+          >
+            Inscripción y pagos
+          </h3>
+
+          <p
+            data-es="Cuando el sistema esté listo, este botón llevará a las familias al formulario de inscripción y al pago seguro."
+            data-en="Once the system is ready, this button will take families to registration and secure payment."
+          >
+            Cuando el sistema esté listo, este botón llevará a las familias al
+            formulario de inscripción y al pago seguro.
+          </p>
+
+          <a
+            class="btn"
+            href="#prueba"
+            data-es="Comenzar inscripción"
+            data-en="Start registration"
+          >
+            Comenzar inscripción
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><div class="wrap foot"><div class="brand"><img src="assets/logo-pavlova.png" alt=""><span class="brand-text">PAVLOVA<small>ESCUELA DE DANZA</small></span></div><div>© <span id="year"></span> Escuela de Danza Pavlova</div><div class="socials"><a href="https://www.instagram.com/escueladedanzapavlova_/" target="_blank" rel="noopener">Instagram</a></div></div></footer>
+
+  <footer>
+    <div class="wrap foot">
+      <div class="brand">
+        <img src="assets/logo-pavlova.png" alt="">
+
+        <span class="brand-text">
+          PAVLOVA
+          <small>ESCUELA DE DANZA</small>
+        </span>
+      </div>
+
+      <div>
+        © <span id="year"></span> Escuela de Danza Pavlova
+      </div>
+
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/escueladedanzapavlova_/"
+          target="_blank"
+          rel="noopener"
+        >
+          Instagram
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    const langBtn=document.getElementById('lang');let current='es';langBtn.addEventListener('click',()=>{current=current==='es'?'en':'es';document.documentElement.lang=current;langBtn.textContent=current==='es'?'EN':'ES';document.querySelectorAll('[data-es]').forEach(el=>el.textContent=el.dataset[current]);document.querySelectorAll('[data-ph-es]').forEach(el=>el.placeholder=el.dataset['ph'+current.charAt(0).toUpperCase()+current.slice(1)]);});
-    document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('trialForm').addEventListener('submit',e=>{e.preventDefault();alert(current==='es'?'Formulario de demostración. Se conectará a Google Forms cuando tengamos los datos finales.':'Demonstration form. It will connect to Google Forms once we have the final details.');});
+    const langBtn = document.getElementById("lang");
+    const trialForm = document.getElementById("trialForm");
+    let current = "es";
+
+    langBtn.addEventListener("click", () => {
+      current = current === "es" ? "en" : "es";
+      document.documentElement.lang = current;
+      langBtn.textContent = current === "es" ? "EN" : "ES";
+
+      document.querySelectorAll("[data-es]").forEach((element) => {
+        element.textContent = element.dataset[current];
+      });
+
+      document.querySelectorAll("[data-ph-es]").forEach((element) => {
+        element.placeholder =
+          current === "es" ? element.dataset.phEs : element.dataset.phEn;
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    trialForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      alert(
+        current === "es"
+          ? "Formulario de demostración. Se conectará al sistema de registro cuando tengamos los datos finales."
+          : "Demonstration form. It will connect to the registration system once we have the final details."
+      );
+    });
   </script>
 </body>
 </html>
