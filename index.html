@@ -614,6 +614,31 @@
     padding: 12px 15px;
   }
 }
+ 
+  .map-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--wine);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.map-card {
+  margin-top: 55px;
+}
+
+.map-card iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+  border: 0;
+}
   </style>
   
 </head>
@@ -1042,7 +1067,19 @@
               <span data-es="Ubicación" data-en="Location">
                 Ubicación
               </span>
-              <div>Playas de Tijuana, Baja California</div>
+              <div>
+  Lava 2011, Jardines Playas de Tijuana,<br>
+  22505 Tijuana, B.C., México
+</div>
+
+<a
+  class="map-link"
+  href="https://www.google.com/maps/dir/?api=1&destination=Lava+2011%2C+Jardines+Playas+de+Tijuana%2C+22505+Tijuana%2C+B.C.%2C+Mexico"
+  target="_blank"
+  rel="noopener"
+>
+  Cómo llegar →
+</a>
             </div>
 
             <div class="detail">
@@ -1101,6 +1138,28 @@
         </div>
       </div>
     </section>
+    <div class="wrap map-card">
+  <iframe
+    src="https://www.google.com/maps?q=Lava+2011,+Jardines+Playas+de+Tijuana,+22505+Tijuana,+B.C.,+Mexico&output=embed"
+    title="Ubicación de Escuela de Danza Pavlova"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen
+  ></iframe>
+</div>
+          </div>
+    </div>
+
+    <div class="wrap map-card">
+      <iframe
+        src="https://www.google.com/maps?q=Lava+2011,+Jardines+Playas+de+Tijuana,+22505+Tijuana,+B.C.,+Mexico&output=embed"
+        title="Ubicación de Escuela de Danza Pavlova"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
   </main>
 
   <footer>
