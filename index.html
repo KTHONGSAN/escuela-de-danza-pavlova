@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Escuela de Danza Pavlova — formación artística para todas las edades.">
+  <meta
+    name="description"
+    content="Escuela de Danza Pavlova — formación artística para todas las edades."
+  >
   <title>Escuela de Danza Pavlova</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap");
 
     :root {
       --ink: #241b22;
@@ -88,9 +91,9 @@
 
     .brand-text small {
       display: block;
+      color: var(--wine);
       font: 500 0.57rem Montserrat;
       letter-spacing: 0.25em;
-      color: var(--wine);
     }
 
     .links {
@@ -98,8 +101,8 @@
       align-items: center;
       gap: 24px;
       font-size: 0.78rem;
-      text-transform: uppercase;
       letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
 
     .links a:hover {
@@ -107,10 +110,10 @@
     }
 
     .lang {
+      padding: 7px 10px;
       border: 1px solid var(--wine);
       background: transparent;
       color: var(--wine);
-      padding: 7px 10px;
       cursor: pointer;
     }
 
@@ -122,8 +125,17 @@
       overflow: hidden;
       color: white;
       background:
-        linear-gradient(120deg, rgba(36, 27, 34, 0.88), rgba(113, 54, 71, 0.62)),
-        radial-gradient(circle at 70% 30%, #d9a7aa, #713647 45%, #241b22);
+        linear-gradient(
+          120deg,
+          rgba(36, 27, 34, 0.88),
+          rgba(113, 54, 71, 0.62)
+        ),
+        radial-gradient(
+          circle at 70% 30%,
+          #d9a7aa,
+          #713647 45%,
+          #241b22
+        );
     }
 
     .hero::after {
@@ -152,8 +164,8 @@
       width: 116px;
       height: 116px;
       margin-bottom: 18px;
-      object-fit: cover;
       border-radius: 50%;
+      object-fit: cover;
       box-shadow: 0 14px 45px rgba(0, 0, 0, 0.28);
     }
 
@@ -250,26 +262,32 @@
       gap: 70px;
     }
 
+    /*
+      PHOTO FIX:
+      The image keeps its natural proportions.
+      Nothing is forced into a square or cropped.
+    */
     .art {
-      position: relative;
+      width: 100%;
       min-height: 0;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
+      overflow: visible;
       background: transparent;
     }
 
     .art::before,
     .art::after {
       display: none;
+      content: none;
     }
 
     .art img {
-      position: absolute;
-      inset: 0;
+      position: static;
+      display: block;
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
+      max-width: 100%;
+      height: auto;
+      object-fit: initial;
+      object-position: initial;
     }
 
     .intro h2 {
@@ -486,7 +504,13 @@
       }
 
       .art {
+        width: 100%;
         min-height: 0;
+      }
+
+      .art img {
+        width: 100%;
+        height: auto;
       }
 
       .form {
@@ -560,7 +584,10 @@
   <header>
     <nav class="wrap">
       <a class="brand" href="#inicio">
-        <img src="assets/logo-pavlova.png" alt="Logo de Escuela de Danza Pavlova">
+        <img
+          src="assets/logo-pavlova.png"
+          alt="Logo de Escuela de Danza Pavlova"
+        >
 
         <span class="brand-text">
           PAVLOVA
@@ -569,13 +596,30 @@
       </a>
 
       <div class="links">
-        <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
-        <a href="#clases" data-es="Clases" data-en="Classes">Clases</a>
-        <a href="#horarios" data-es="Horarios" data-en="Schedule">Horarios</a>
-        <a class="nav-cta" href="#prueba" data-es="Clase de prueba" data-en="Free trial">
+        <a href="#nosotros" data-es="Nosotros" data-en="About">
+          Nosotros
+        </a>
+
+        <a href="#clases" data-es="Clases" data-en="Classes">
+          Clases
+        </a>
+
+        <a href="#horarios" data-es="Horarios" data-en="Schedule">
+          Horarios
+        </a>
+
+        <a
+          class="nav-cta"
+          href="#prueba"
+          data-es="Clase de prueba"
+          data-en="Free trial"
+        >
           Clase de prueba
         </a>
-        <button class="lang" id="lang" type="button">EN</button>
+
+        <button class="lang" id="lang" type="button">
+          EN
+        </button>
       </div>
     </nav>
   </header>
@@ -610,6 +654,7 @@
           <span data-es="Fundada en 1984" data-en="Founded in 1984">
             Fundada en 1984
           </span>
+
           <span>Playas de Tijuana</span>
           <span>CID · UNESCO</span>
         </div>
@@ -683,7 +728,9 @@
     <section class="programs" id="clases">
       <div class="wrap">
         <div class="section-head">
-          <span data-es="Programas" data-en="Programs">Programas</span>
+          <span data-es="Programas" data-en="Programs">
+            Programas
+          </span>
 
           <h2
             data-es="Una clase para cada etapa"
@@ -704,7 +751,11 @@
         <div class="cards">
           <article class="card">
             <div class="num">01</div>
-            <h3 data-es="Primeros Pasos" data-en="First Steps">Primeros Pasos</h3>
+
+            <h3 data-es="Primeros Pasos" data-en="First Steps">
+              Primeros Pasos
+            </h3>
+
             <p
               data-es="Movimiento creativo, musicalidad y coordinación para los bailarines más pequeños."
               data-en="Creative movement, musicality, and coordination for our youngest dancers."
@@ -712,14 +763,23 @@
               Movimiento creativo, musicalidad y coordinación para los
               bailarines más pequeños.
             </p>
-            <a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">
+
+            <a
+              href="#prueba"
+              data-es="Probar una clase →"
+              data-en="Try a class →"
+            >
               Probar una clase →
             </a>
           </article>
 
           <article class="card">
             <div class="num">02</div>
-            <h3 data-es="Ballet Juvenil" data-en="Youth Ballet">Ballet Juvenil</h3>
+
+            <h3 data-es="Ballet Juvenil" data-en="Youth Ballet">
+              Ballet Juvenil
+            </h3>
+
             <p
               data-es="Fundamentos clásicos, postura, técnica y expresión para niños y adolescentes."
               data-en="Classical foundations, posture, technique, and expression for children and teens."
@@ -727,16 +787,26 @@
               Fundamentos clásicos, postura, técnica y expresión para niños y
               adolescentes.
             </p>
-            <a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">
+
+            <a
+              href="#prueba"
+              data-es="Probar una clase →"
+              data-en="Try a class →"
+            >
               Probar una clase →
             </a>
           </article>
 
           <article class="card">
             <div class="num">03</div>
-            <h3 data-es="Danza para Adultos" data-en="Dance for Adults">
+
+            <h3
+              data-es="Danza para Adultos"
+              data-en="Dance for Adults"
+            >
               Danza para Adultos
             </h3>
+
             <p
               data-es="Clases acogedoras para comenzar, regresar a la danza o seguir perfeccionándose."
               data-en="Welcoming classes to begin, return to dance, or continue improving."
@@ -744,7 +814,12 @@
               Clases acogedoras para comenzar, regresar a la danza o seguir
               perfeccionándose.
             </p>
-            <a href="#prueba" data-es="Probar una clase →" data-en="Try a class →">
+
+            <a
+              href="#prueba"
+              data-es="Probar una clase →"
+              data-en="Try a class →"
+            >
               Probar una clase →
             </a>
           </article>
@@ -755,8 +830,14 @@
     <section id="horarios">
       <div class="wrap">
         <div class="section-head">
-          <span data-es="Horarios" data-en="Schedule">Horarios</span>
-          <h2 data-es="Encuentra tu momento" data-en="Find your time">
+          <span data-es="Horarios" data-en="Schedule">
+            Horarios
+          </span>
+
+          <h2
+            data-es="Encuentra tu momento"
+            data-en="Find your time"
+          >
             Encuentra tu momento
           </h2>
         </div>
@@ -795,12 +876,17 @@
                 <td>13–17</td>
                 <td data-es="Jueves" data-en="Thursday">Jueves</td>
                 <td>6:00 PM</td>
-                <td data-es="Intermedio" data-en="Intermediate">Intermedio</td>
+                <td data-es="Intermedio" data-en="Intermediate">
+                  Intermedio
+                </td>
               </tr>
 
               <tr>
                 <td>
-                  <strong data-es="Danza para Adultos" data-en="Dance for Adults">
+                  <strong
+                    data-es="Danza para Adultos"
+                    data-en="Dance for Adults"
+                  >
                     Danza para Adultos
                   </strong>
                 </td>
@@ -826,7 +912,11 @@
     <section class="trial" id="prueba">
       <div class="wrap trial-grid">
         <div>
-          <span class="eyebrow" data-es="Tu primera clase" data-en="Your first class">
+          <span
+            class="eyebrow"
+            data-es="Tu primera clase"
+            data-en="Your first class"
+          >
             Tu primera clase
           </span>
 
@@ -874,7 +964,10 @@
             </option>
             <option>Primeros Pasos</option>
             <option>Ballet Juvenil</option>
-            <option data-es="Danza para Adultos" data-en="Dance for Adults">
+            <option
+              data-es="Danza para Adultos"
+              data-en="Dance for Adults"
+            >
               Danza para Adultos
             </option>
           </select>
@@ -902,16 +995,22 @@
     <section class="contact" id="contacto">
       <div class="wrap contact-grid">
         <div>
-          <h3 data-es="Visítanos" data-en="Visit us">Visítanos</h3>
+          <h3 data-es="Visítanos" data-en="Visit us">
+            Visítanos
+          </h3>
 
           <div class="details">
             <div class="detail">
-              <span data-es="Ubicación" data-en="Location">Ubicación</span>
+              <span data-es="Ubicación" data-en="Location">
+                Ubicación
+              </span>
               <div>Playas de Tijuana, Baja California</div>
             </div>
 
             <div class="detail">
-              <span data-es="Teléfono" data-en="Phone">Teléfono</span>
+              <span data-es="Teléfono" data-en="Phone">
+                Teléfono
+              </span>
               <div>
                 <a href="tel:+526646301291">664 630 1291</a>
               </div>
@@ -1009,11 +1108,14 @@
 
       document.querySelectorAll("[data-ph-es]").forEach((element) => {
         element.placeholder =
-          current === "es" ? element.dataset.phEs : element.dataset.phEn;
+          current === "es"
+            ? element.dataset.phEs
+            : element.dataset.phEn;
       });
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
     trialForm.addEventListener("submit", (event) => {
       event.preventDefault();
