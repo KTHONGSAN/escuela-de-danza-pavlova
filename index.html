@@ -999,12 +999,70 @@
           </p>
         </div>
 
-        <form class="form" id="trialForm">
-          <input
-            required
-            data-ph-es="Nombre del estudiante"
-            data-ph-en="Student name"
-            placeholder="Nombre del estudiante"
+      <form class="form" id="trialForm">
+  <input
+    id="studentName"
+    required
+    data-ph-es="Nombre del estudiante"
+    data-ph-en="Student name"
+    placeholder="Nombre del estudiante"
+  >
+
+  <input
+    id="parentName"
+    required
+    data-ph-es="Nombre del padre, madre o tutor"
+    data-ph-en="Parent or guardian name"
+    placeholder="Nombre del padre, madre o tutor"
+  >
+
+  <input
+    id="studentAge"
+    required
+    type="number"
+    min="2"
+    max="100"
+    data-ph-es="Edad del estudiante"
+    data-ph-en="Student age"
+    placeholder="Edad del estudiante"
+  >
+
+  <input
+    id="email"
+    required
+    type="email"
+    data-ph-es="Correo electrónico"
+    data-ph-en="Email address"
+    placeholder="Correo electrónico"
+  >
+
+  <select id="classInterest" required>
+    <option value="" data-es="Clase de interés" data-en="Class of interest">
+      Clase de interés
+    </option>
+    <option value="Primeros Pasos">Primeros Pasos</option>
+    <option value="Ballet Juvenil">Ballet Juvenil</option>
+    <option value="Danza para Adultos">Danza para Adultos</option>
+  </select>
+
+  <textarea
+    id="formMessage"
+    class="full"
+    rows="4"
+    data-ph-es="Preguntas o experiencia previa"
+    data-ph-en="Questions or previous experience"
+    placeholder="Preguntas o experiencia previa"
+  ></textarea>
+
+  <button
+    class="btn full"
+    type="submit"
+    data-es="Enviar por WhatsApp"
+    data-en="Send through WhatsApp"
+  >
+    Enviar por WhatsApp
+  </button>
+</form>
           >
 
           <input
@@ -1204,15 +1262,32 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    trialForm.addEventListener("submit", (event) => {
-      event.preventDefault();
+  trialForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-      alert(
-        current === "es"
-          ? "Formulario de demostración. Se conectará al sistema de registro cuando tengamos los datos finales."
-          : "Demonstration form. It will connect to the registration system once we have the final details."
-      );
-    });
+  const studentName = document.getElementById("studentName").value;
+  const parentName = document.getElementById("parentName").value;
+  const studentAge = document.getElementById("studentAge").value;
+  const email = document.getElementById("email").value;
+  const classInterest = document.getElementById("classInterest").value;
+  const formMessage = document.getElementById("formMessage").value;
+
+  const whatsappMessage =
+`Hola, me gustaría solicitar una clase de prueba en Escuela de Danza Pavlova.
+
+Estudiante: ${studentName}
+Padre, madre o tutor: ${parentName}
+Edad: ${studentAge}
+Correo: ${email}
+Clase de interés: ${classInterest}
+Preguntas o experiencia previa: ${formMessage || "Ninguna"}`;
+
+  const whatsappURL =
+    "https://wa.me/526646301291?text=" +
+    encodeURIComponent(whatsappMessage);
+
+  window.open(whatsappURL, "_blank");
+});
   </script>
 <a
   class="whatsapp-button"
