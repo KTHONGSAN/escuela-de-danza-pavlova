@@ -577,7 +577,45 @@
         font-size: 3rem;
       }
     }
+  
+  .whatsapp-button {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: #25d366;
+  color: white;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.whatsapp-button:hover {
+  background: #1ebe5d;
+  transform: translateY(-3px);
+}
+
+.whatsapp-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 560px) {
+  .whatsapp-button {
+    right: 14px;
+    bottom: 14px;
+    padding: 12px 15px;
+  }
+}
   </style>
+  
 </head>
 
 <body>
@@ -1127,5 +1165,15 @@
       );
     });
   </script>
+<a
+  class="whatsapp-button"
+  href="https://wa.me/526646301291?text=Hola%2C%20me%20gustaria%20recibir%20informacion%20sobre%20las%20clases%20de%20Escuela%20de%20Danza%20Pavlova."
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar a Escuela de Danza Pavlova por WhatsApp"
+>
+  <span class="whatsapp-icon">💬</span>
+  <span>WhatsApp</span>
+</a>
 </body>
 </html>
