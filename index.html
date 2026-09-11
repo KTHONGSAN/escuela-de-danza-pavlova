@@ -743,6 +743,21 @@
         padding: 12px 15px;
       }
     }
+  .schedule tbody tr:nth-child(odd) {
+  background: rgba(217, 167, 170, 0.18);
+}
+
+.schedule tbody tr:hover {
+  background: rgba(217, 167, 170, 0.3);
+}
+
+.schedule td {
+  vertical-align: middle;
+}
+
+.schedule td:last-child {
+  white-space: nowrap;
+}
   </style>
 </head>
 
@@ -1156,77 +1171,280 @@
       </div>
     </section>
 
-    <section id="horarios">
-      <div class="wrap">
-        <div class="section-head">
-          <span data-es="Horarios" data-en="Schedule">Horarios</span>
+   <section id="horarios">
+  <div class="wrap">
+    <div class="section-head">
+      <span data-es="Horarios" data-en="Schedule">
+        Horarios
+      </span>
 
-          <h2 data-es="Encuentra tu momento" data-en="Find your time">
-            Encuentra tu momento
-          </h2>
-        </div>
+      <h2
+        data-es="Encuentra tu clase"
+        data-en="Find your class"
+      >
+        Encuentra tu clase
+      </h2>
 
-        <div class="schedule">
-          <table>
-            <thead>
-              <tr>
-                <th data-es="Clase" data-en="Class">Clase</th>
-                <th data-es="Edad" data-en="Age">Edad</th>
-                <th data-es="Día" data-en="Day">Día</th>
-                <th data-es="Hora" data-en="Time">Hora</th>
-                <th data-es="Nivel" data-en="Level">Nivel</th>
-              </tr>
-            </thead>
+      <p
+        data-es="Consulta nuestras disciplinas, niveles y horarios disponibles."
+        data-en="Explore our available dance programs, levels, and schedules."
+      >
+        Consulta nuestras disciplinas, niveles y horarios disponibles.
+      </p>
+    </div>
 
-            <tbody>
-              <tr>
-                <td><strong>Primeros Pasos</strong></td>
-                <td>4–6</td>
-                <td data-es="Lunes" data-en="Monday">Lunes</td>
-                <td>4:00 PM</td>
-                <td data-es="Inicial" data-en="Beginner">Inicial</td>
-              </tr>
+    <div class="schedule">
+      <table>
+        <thead>
+          <tr>
+            <th data-es="Disciplina" data-en="Program">
+              Disciplina
+            </th>
 
-              <tr>
-                <td><strong>Ballet Juvenil</strong></td>
-                <td>7–12</td>
-                <td data-es="Miércoles" data-en="Wednesday">Miércoles</td>
-                <td>5:00 PM</td>
-                <td data-es="Inicial" data-en="Beginner">Inicial</td>
-              </tr>
+            <th data-es="Edades / Nivel" data-en="Ages / Level">
+              Edades / Nivel
+            </th>
 
-              <tr>
-                <td><strong>Ballet Juvenil</strong></td>
-                <td>13–17</td>
-                <td data-es="Jueves" data-en="Thursday">Jueves</td>
-                <td>6:00 PM</td>
-                <td data-es="Intermedio" data-en="Intermediate">Intermedio</td>
-              </tr>
+            <th data-es="Días" data-en="Days">
+              Días
+            </th>
 
-              <tr>
-                <td>
-                  <strong data-es="Danza para Adultos" data-en="Dance for Adults">
-                    Danza para Adultos
-                  </strong>
-                </td>
-                <td>18+</td>
-                <td data-es="Sábado" data-en="Saturday">Sábado</td>
-                <td>10:00 AM</td>
-                <td data-es="Todos" data-en="All levels">Todos</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <th data-es="Horario" data-en="Time">
+              Horario
+            </th>
+          </tr>
+        </thead>
 
-        <p
-          class="note"
-          data-es="Horario de demostración — pendiente de confirmar."
-          data-en="Demonstration schedule — pending confirmation."
-        >
-          Horario de demostración — pendiente de confirmar.
-        </p>
-      </div>
-    </section>
+        <tbody>
+          <tr>
+            <td><strong>Ballet</strong></td>
+
+            <td
+              data-es="Pequeñas · 3 a 6 años"
+              data-en="Little dancers · Ages 3–6"
+            >
+              Pequeñas · 3 a 6 años
+            </td>
+
+            <td
+              data-es="Martes y jueves"
+              data-en="Tuesday and Thursday"
+            >
+              Martes y jueves
+            </td>
+
+            <td>4:00–5:00 PM</td>
+          </tr>
+
+          <tr>
+            <td><strong>Ballet</strong></td>
+
+            <td
+              data-es="Infantil · 7 a 10 años"
+              data-en="Children · Ages 7–10"
+            >
+              Infantil · 7 a 10 años
+            </td>
+
+            <td
+              data-es="Lunes y miércoles"
+              data-en="Monday and Wednesday"
+            >
+              Lunes y miércoles
+            </td>
+
+            <td>4:00–5:00 PM</td>
+          </tr>
+
+          <tr>
+            <td><strong>Ballet</strong></td>
+
+            <td
+              data-es="Infantil-Juvenil · 10 a 13 años"
+              data-en="Children and teens · Ages 10–13"
+            >
+              Infantil-Juvenil · 10 a 13 años
+            </td>
+
+            <td
+              data-es="Martes y jueves"
+              data-en="Tuesday and Thursday"
+            >
+              Martes y jueves
+            </td>
+
+            <td>5:00–6:00 PM</td>
+          </tr>
+
+          <tr>
+            <td><strong>Ballet</strong></td>
+
+            <td
+              data-es="Juvenil-Adulto · 14 años en adelante"
+              data-en="Teens and adults · Ages 14+"
+            >
+              Juvenil-Adulto · 14 años en adelante
+            </td>
+
+            <td
+              data-es="Lunes y miércoles"
+              data-en="Monday and Wednesday"
+            >
+              Lunes y miércoles
+            </td>
+
+            <td>6:00–7:30 PM</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong
+                data-es="Ballet Adultos"
+                data-en="Adult Ballet"
+              >
+                Ballet Adultos
+              </strong>
+            </td>
+
+            <td
+              data-es="Adultos · Matutino"
+              data-en="Adults · Morning class"
+            >
+              Adultos · Matutino
+            </td>
+
+            <td
+              data-es="Lunes y miércoles"
+              data-en="Monday and Wednesday"
+            >
+              Lunes y miércoles
+            </td>
+
+            <td>9:30–10:30 AM</td>
+          </tr>
+
+          <tr>
+            <td><strong>Jazz / Hip Hop</strong></td>
+
+            <td
+              data-es="Infantil-Juvenil"
+              data-en="Children and teens"
+            >
+              Infantil-Juvenil
+            </td>
+
+            <td
+              data-es="Lunes y miércoles"
+              data-en="Monday and Wednesday"
+            >
+              Lunes y miércoles
+            </td>
+
+            <td>5:00–6:00 PM</td>
+          </tr>
+
+          <tr>
+            <td><strong>Jazz / Hip Hop</strong></td>
+
+            <td
+              data-es="Juvenil-Adulto"
+              data-en="Teens and adults"
+            >
+              Juvenil-Adulto
+            </td>
+
+            <td
+              data-es="Martes y jueves"
+              data-en="Tuesday and Thursday"
+            >
+              Martes y jueves
+            </td>
+
+            <td>6:00–7:00 PM</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong
+                data-es="Danza Contemporánea"
+                data-en="Contemporary Dance"
+              >
+                Danza Contemporánea
+              </strong>
+            </td>
+
+            <td
+              data-es="Juvenil-Adulto"
+              data-en="Teens and adults"
+            >
+              Juvenil-Adulto
+            </td>
+
+            <td
+              data-es="Martes y jueves"
+              data-en="Tuesday and Thursday"
+            >
+              Martes y jueves
+            </td>
+
+            <td>7:00–8:00 PM</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong
+                data-es="Acrobacia"
+                data-en="Acrobatics"
+              >
+                Acrobacia
+              </strong>
+            </td>
+
+            <td
+              data-es="3 años en adelante"
+              data-en="Ages 3+"
+            >
+              3 años en adelante
+            </td>
+
+            <td data-es="Sábado" data-en="Saturday">
+              Sábado
+            </td>
+
+            <td>8:30–9:30 AM</td>
+          </tr>
+
+          <tr>
+            <td><strong>Tap</strong></td>
+
+            <td
+              data-es="3 años en adelante"
+              data-en="Ages 3+"
+            >
+              3 años en adelante
+            </td>
+
+            <td data-es="Sábado" data-en="Saturday">
+              Sábado
+            </td>
+
+            <td>9:30–10:30 AM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p
+      class="note"
+      data-es="Los horarios están sujetos a disponibilidad y posibles cambios. Contáctanos para confirmar tu clase."
+      data-en="Schedules are subject to availability and possible changes. Contact us to confirm your class."
+    >
+      Los horarios están sujetos a disponibilidad y posibles cambios.
+      Contáctanos para confirmar tu clase.
+    </p>
+  </div>
+</section>
+  
 
     <section class="trial" id="prueba">
       <div class="wrap trial-grid">
