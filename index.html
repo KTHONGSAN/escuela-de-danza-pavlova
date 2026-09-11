@@ -1510,14 +1510,49 @@
             placeholder="Correo electrónico"
           >
 
-          <select id="classInterest" required>
-            <option value="" data-es="Clase de interés" data-en="Class of interest">
-              Clase de interés
-            </option>
-            <option value="Primeros Pasos">Primeros Pasos</option>
-            <option value="Ballet Juvenil">Ballet Juvenil</option>
-            <option value="Danza para Adultos">Danza para Adultos</option>
-          </select>
+        <select id="classInterest" name="clase" required>
+  <option
+    value=""
+    disabled
+    selected
+    data-es="Clase de interés"
+    data-en="Class of interest">
+    Clase de interés
+  </option>
+
+  <option value="Ballet">
+    Ballet
+  </option>
+
+  <option
+    value="Ballet para adultos"
+    data-es="Ballet para adultos"
+    data-en="Adult Ballet">
+    Ballet para adultos
+  </option>
+
+  <option value="Jazz / Hip Hop">
+    Jazz / Hip Hop
+  </option>
+
+  <option
+    value="Danza contemporánea"
+    data-es="Danza contemporánea"
+    data-en="Contemporary Dance">
+    Danza contemporánea
+  </option>
+
+  <option
+    value="Acrobacia"
+    data-es="Acrobacia"
+    data-en="Acrobatics">
+    Acrobacia
+  </option>
+
+  <option value="Tap">
+    Tap
+  </option>
+</select>
 
           <textarea
             id="formMessage"
@@ -1576,9 +1611,9 @@
             <div class="detail">
               <span>Email</span>
              <div>
-  <a href="mailto:NEWEMAIL@example.com">
-    Ligia@escuelapavlova.com
-  </a>
+  <a href="mailto:Ligia@escuelapavlova.com">
+  Ligia@escuelapavlova.com
+</a>
 </div>
             </div>
 
