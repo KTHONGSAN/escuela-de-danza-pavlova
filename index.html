@@ -169,11 +169,21 @@
       text-transform: uppercase;
     }
 
-    .hero h1 {
-      margin: 12px 0;
-      font-size: clamp(4rem, 10vw, 8.5rem);
-      font-weight: 400;
-    }
+  .hero h1 {
+  margin: 12px auto 24px;
+  max-width: 950px;
+  font-size: clamp(3.2rem, 7vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.hero h1 sup {
+  position: relative;
+  top: -0.7em;
+  margin-left: 4px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 0.16em;
+}
 
     .hero p {
       margin: 0 0 24px;
@@ -667,9 +677,9 @@
         grid-column: auto;
       }
 
-      .hero h1 {
-        font-size: 4.3rem;
-      }
+     .hero h1 {
+  font-size: 3.2rem;
+}
 
       .foot {
         align-items: flex-start;
@@ -786,7 +796,10 @@
           Arte · Disciplina · Expresión
         </div>
 
-        <h1>Pavlova</h1>
+      <h1>
+  Escuela de Danza<br>
+  Pavlova <sup>®</sup>
+</h1>
 
         <p
           data-es="40 años formando bailarines de excelencia"
